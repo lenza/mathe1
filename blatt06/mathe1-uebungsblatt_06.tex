@@ -32,12 +32,16 @@ Wegen dem Kommutativgesetz der Addition der natürlichen Zahlen und dem Assoziat
 $ (a+d) + (b'+c') = (a'+d') + (b+c)$
 $\Rightarrow (a+d, b+c) \sim (a'+d', b'+c')$ \\
 Aus dieser Relation folgt, dass die Äquivalenzklassen $\overline{(a+d,b+c)}$ und $\overline{(a'+d',b'+c')}$ gleich sind. Dies können wir nun verwenden: \\
+\begin{align*}
+&\overline{(a,b)} - \overline{(c,d)} \\
+=& \overline{(a,b)} + \overline{(d,c)}   \tag{Definition Subtraktion der ganzen Zahlen} \\
+=& \overline{(a+d,b+c)}   \tag{Definition Addition der ganzen Zahlen}\\
+=& \overline{(a'+d',b'+c')}   \tag{siehe oben} \\
+=& \overline{(a',b')} + \overline{(d',c')}   
+\tag{q.e.d.}
+\end{align*}
 
-$\overline{(a,b)} - \overline{(c,d)}$ \\
-$= \overline{(a,b)} + \overline{(d,c)}$   (Definition Subtraktion der ganzen Zahlen) \\
-$= \overline{(a+d,b+c)}$   (Definition Addition der ganzen Zahlen) \\
-$= \overline{(a'+d',b'+c')}$   (siehe oben) \\
-$= \overline{(a',b')} + \overline{(d',c')}$   $_\Box$
+
 
 \section*{Aufgabe H15}
 Distributivgesetz für ganze Zahlen: \\
@@ -45,16 +49,16 @@ für alle $\overline{(a,b)}, \overline{(c,d)}, \overline{(e,f)} \in Z$ gilt:\\
 $ (\overline{a,b}) \cdot ( \overline{(c,d)} + \overline{(e,f)} ) = \overline{(a,b)} \cdot \overline{(c,d)} + \overline{(a,b)} \cdot \overline{(e,f)}$\\
 
 Beweis:
-
-$ \overline{(a,b)} \cdot ( \overline{(c,d)} + \overline{(e,f)} )$\\
-$ = \overline{(a,b)} \cdot \overline{(c+e,d+f)}$   (Addition der ganzen Zahlen)\\
-$ = \overline{((a \cdot (c+e)) + (b \cdot (d+f)), (a \cdot (d+f))+ (b \cdot (c+e))}$   (Multiplikation der ganzen Zahlen) \\
-$ = \overline{((ac+ae+bd+bf),(ad+af+bc+be))}$   (Korollar 4.22 Vorlesung und Assoziativg. Add. $\mathbb{N}$)\\
-$ = \overline{((ac+bd+ae+bf),(ad+bc+af+be))}$   (Kommutativgesetz Addition $\mathbb{N}$)\\
-$ = \overline{((ac+bd)+(ae+bf)),((ad+bc)+(af+be))}$   (Assoziativgesetz Addition $\mathbb{N}$)\\
-$ = \overline{((ac+bd),(ad+bc))} + \overline{((ae+bf),(af+be))}$   (Addition der ganzen Zahlen)\\
-$ = \overline{(a,b)} \cdot \overline{(c,d)} + \overline{(a,b)} \cdot \overline{(e,f)}$ (Multiplikation der ganzen Zahlen) $ ~~_\Box$\\
-
+\begin{align*}
+& \overline{(a,b)} \cdot ( \overline{(c,d)} + \overline{(e,f)} )\\
+& = \overline{(a,b)} \cdot \overline{(c+e,d+f)}   \tag{Addition der ganzen Zahlen}\\
+& = \overline{((a \cdot (c+e)) + (b \cdot (d+f)), (a \cdot (d+f))+ (b \cdot (c+e))}   \tag{Multiplikation der ganzen Zahlen} \\
+& = \overline{((ac+ae+bd+bf),(ad+af+bc+be))}   \tag{Korollar 4.22 Vorlesung, Assoziativg. Add. $\mathbb{N}$}\\
+& = \overline{((ac+bd+ae+bf),(ad+bc+af+be))}  \tag{Kommutativgesetz Addition $\mathbb{N}$}\\
+& = \overline{((ac+bd)+(ae+bf)),((ad+bc)+(af+be))}   \tag{Assoziativgesetz Addition $\mathbb{N}$}\\
+& = \overline{((ac+bd),(ad+bc))} + \overline{((ae+bf),(af+be))}   \tag{Addition der ganzen Zahlen}\\
+& = \overline{(a,b)} \cdot \overline{(c,d)} + \overline{(a,b)} \cdot \overline{(e,f)} \tag{Multiplikation der ganzen Zahlen}  ~~_\Box\\
+\end{align*}
 \section*{Aufgabe B3}
 
 $F_n$ ist rekursiv definiert:
