@@ -18,46 +18,56 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Aufgabe H14}
-Die Subtraktion der ganzen Zahlen ist wie folgt definiert: \\
-$\overline{(a,b)} - \overline{(c,d)} := \overline{(a,b)} + \overline{(d,c)}$ \\
-
-z.z.: \\
-$ (a,b) \sim (a',b') \land (c, d) \sim (c',d') \Rightarrow \overline{(a,b)} - \overline{(c,d)} = \overline{(a',b')} - \overline{(c',d')}$ \\
-
-$(a,b) \sim (a',b') \Rightarrow a + b' = a' + b$ \\
-$(c,d) \sim (c',d') \Rightarrow c + d' = c' + d$ \\
-also gilt auch: \\
-$ a + b' + c' + d = c + d' + a' + b$ \\
-Wegen dem Kommutativgesetz der Addition der natürlichen Zahlen und dem Assoziativgesetz der Addition der natürlichen Zahlen können wir die Summanden umstellen und dann beliebig klammern, sodass wir schreiben können: \\
-$ (a+d) + (b'+c') = (a'+d') + (b+c)$
-$\Rightarrow (a+d, b+c) \sim (a'+d', b'+c')$ \\
-Aus dieser Relation folgt, dass die Äquivalenzklassen $\overline{(a+d,b+c)}$ und $\overline{(a'+d',b'+c')}$ gleich sind. Dies können wir nun verwenden: \\
+Die Subtraktion der ganzen Zahlen $\mathbb{Z}$ ist wie folgt definiert: \\
 \begin{align*}
-&\overline{(a,b)} - \overline{(c,d)} \\
-=& \overline{(a,b)} + \overline{(d,c)}   \tag{Definition Subtraktion der ganzen Zahlen} \\
-=& \overline{(a+d,b+c)}   \tag{Definition Addition der ganzen Zahlen}\\
-=& \overline{(a'+d',b'+c')}   \tag{siehe oben} \\
-=& \overline{(a',b')} + \overline{(d',c')}   
-\tag{q.e.d.}
+&\overline{(a,b)} - \overline{(c,d)} := \overline{(a,b)} + \overline{(d,c)} \\
 \end{align*}
 
 
+z.Z.: 
+$ (a,b) \sim (a',b') \land (c, d) \sim (c',d') \Rightarrow \overline{(a,b)} - \overline{(c,d)} = \overline{(a',b')} - \overline{(c',d')}$ \\
+\\
+$(a,b) \sim (a',b') \Rightarrow a + b' = a' + b$ \\
+$(c,d) \sim (c',d') \Rightarrow c + d' = c' + d$ \\
+\\
+Also gilt auch: 
+$ a + b' + c' + d = c + d' + a' + b$ \\
+\\
+Mit dem Kommutativgesetz der Addition der natürlichen Zahlen $\mathbb{N}$ und dem Assoziativgesetz der Addition aus $\mathbb{N}$ können wir die Summanden umstellen und dann beliebig klammern, sodass wir schreiben können: \\
+\begin{align*}
+&(a+d) + (b'+c') = (a'+d') + (b+c) \Rightarrow (a+d, b+c) \sim (a'+d', b'+c') \\
+\end{align*}
+
+Aus dieser Relation folgt, dass die Äquivalenzklassen $\overline{(a+d,b+c)}$ und $\overline{(a'+d',b'+c')}$ gleich sind. Dies können wir nun verwenden: \\
+\begin{align*}
+&\overline{(a,b)} - \overline{(c,d)} \\
+=& \overline{(a,b)} + \overline{(d,c)}   \tag{Definition Subtraktion aus $\mathbb{Z}$} \\
+=& \overline{(a+d,b+c)}   \tag{Definition Addition $\mathbb{Z}$}\\
+=& \overline{(a'+d',b'+c')}   \tag{siehe oben} \\
+=& \overline{(a',b')} + \overline{(d',c')}   \tag{q.e.d.}
+\end{align*}
+
+\newpage
 
 \section*{Aufgabe H15}
 Distributivgesetz für ganze Zahlen: \\
-für alle $\overline{(a,b)}, \overline{(c,d)}, \overline{(e,f)} \in Z$ gilt:\\
-$ (\overline{a,b}) \cdot ( \overline{(c,d)} + \overline{(e,f)} ) = \overline{(a,b)} \cdot \overline{(c,d)} + \overline{(a,b)} \cdot \overline{(e,f)}$\\
+
+Für alle $\overline{(a,b)}, \overline{(c,d)}, \overline{(e,f)} \in \mathbb{Z}$ gilt:\\
+\begin{align*}
+& (\overline{a,b}) \cdot ( \overline{(c,d)} + \overline{(e,f)} ) = \overline{(a,b)} \cdot \overline{(c,d)} +\overline{(a,b)} \cdot \overline{(e,f)}\\
+\end{align*}
+
 
 Beweis:
 \begin{align*}
 & \overline{(a,b)} \cdot ( \overline{(c,d)} + \overline{(e,f)} )\\
-& = \overline{(a,b)} \cdot \overline{(c+e,d+f)}   \tag{Addition der ganzen Zahlen}\\
-& = \overline{((a \cdot (c+e)) + (b \cdot (d+f)), (a \cdot (d+f))+ (b \cdot (c+e))}   \tag{Multiplikation der ganzen Zahlen} \\
-& = \overline{((ac+ae+bd+bf),(ad+af+bc+be))}   \tag{Korollar 4.22 Vorlesung, Assoziativg. Add. $\mathbb{N}$}\\
+& = \overline{(a,b)} \cdot \overline{(c+e,d+f)}   \tag{Addition $\mathbb{Z}$}\\
+& = \overline{((a \cdot (c+e)) + (b \cdot (d+f)), (a \cdot (d+f))+ (b \cdot (c+e))}   \tag{Multiplikation $\mathbb{Z}$} \\
+& = \overline{((ac+ae+bd+bf),(ad+af+bc+be))}   \tag{Distributivgesetz nach Korollar 4.22}\\
 & = \overline{((ac+bd+ae+bf),(ad+bc+af+be))}  \tag{Kommutativgesetz Addition $\mathbb{N}$}\\
 & = \overline{((ac+bd)+(ae+bf)),((ad+bc)+(af+be))}   \tag{Assoziativgesetz Addition $\mathbb{N}$}\\
-& = \overline{((ac+bd),(ad+bc))} + \overline{((ae+bf),(af+be))}   \tag{Addition der ganzen Zahlen}\\
-& = \overline{(a,b)} \cdot \overline{(c,d)} + \overline{(a,b)} \cdot \overline{(e,f)} \tag{Multiplikation der ganzen Zahlen}  ~~_\Box\\
+& = \overline{((ac+bd),(ad+bc))} + \overline{((ae+bf),(af+be))}   \tag{Addition $\mathbb{Z}$}\\
+& = \overline{(a,b)} \cdot \overline{(c,d)} + \overline{(a,b)} \cdot \overline{(e,f)} \tag{Multiplikation $\mathbb{Z}$}  ~~_\Box\\
 \end{align*}
 \section*{Aufgabe B3}
 
