@@ -121,5 +121,8 @@ $ggT(F_n, F_{n+1}) = F_{n-1} \cdot F_n+F_{n-2}\cdot F_{n+1}$\\
 \textbf{Induktionsschritt}:\\
 z.Z.
 $ggT(F_{n+1}, F_{(n+1)+1})=F_{(n+1)-1} \cdot F_{n+1} + F_{(n+1)-2} \cdot F_{(n+1)+1}$\\
-$=ggT(F_{n+1}, F_{n+2})=F_{n} \cdot F_{n+1} + F_{n-1} \cdot F_{n+2}$
+$=ggT(F_{n+1}, F_{n+2})=F_{n} \cdot F_{n+1} + F_{n-1} \cdot F_{n+2}$\\
+$=ggT(F_{n+1}, F_{n+2})=(F_{n} \cdot F_{n} + F_n \cdot F_{n-1}) + (F_{n-1} \cdot F_{n+1} + F_{n-1} \cdot F_{n}$)\\
+$=ggT(F_{n+1}, F_{n+2})=F_{n} (F_{n} + F_{n-1}) + F_{n-1} (F_{n+1} + F_{n}$) (Distributivgesetz nach 4.22)\\
+
 \end{document}
