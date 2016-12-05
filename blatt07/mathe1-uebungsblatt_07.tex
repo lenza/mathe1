@@ -85,7 +85,7 @@ Nach der Anwendung des erweiterten euklidischen Algorithmus ist der größte gem
 \end{center}
 
 Überprüfung:\\
-$a\cdot F_4 +b \cdot F_5 = ggT(F_5,F_6)=((-3)\cdot5)+(2\cdot8)=1$\\
+$a\cdot F_4 +b \cdot F_5 = ggT(F_4,F_5)=((-3)\cdot5)+(2\cdot8)=1$\\
 Nach der Anwendung des erweiterten euklidischen Algorithmus ist der größte gemeinsame Teiler der vierten und fünften Fibonacci-Zahlen $(F_4~und~F_5)$ gleich 1.\\
 
 \begin{center}
@@ -108,21 +108,31 @@ Nach der Anwendung des erweiterten euklidischen Algorithmus ist der größte gem
 
 \section*{Aufgabe H17 b)}
 \textbf{Behauptung}: \\
-Der ggT$(F_n, F_{n+1})$ ist immer 1.\\
-Für $\forall~n \geq 3$ ist $a=F_{n-1} , b= F_{n-2}$\\
-\\
+$\forall~n \geq 3, n \in \mathbb{N}$ gilt: 
+$ggT(F_n, F_{n+1}) = F_{n-1} \cdot F_n - F_{n-2} \cdot F_{n+1}$\\
+Für die Gleichung aus Aufgabe H17a gilt also: $a = F_{n-1}$, $b = -(F_{n-2})$ \\
+
 Beweis durch vollständige Induktion über n.\\
+
 \textbf{Induktionsanfang}:\\
-$n<3$
-\\
+$n=3$ \\
+$ggT(F_n, F_{n+1}) = F_{n-1} \cdot F_n - F_{n-2} \cdot F_{n+1}$ \\
+$\Leftrightarrow ggT(F_3, F_{4}) = F_{2} \cdot F_3 - F_{1} \cdot F_{4}$ \\
+$\Leftrightarrow ggT(3, 5) = 2 \cdot 3 - 1 \cdot 5$ \\
+$\Leftrightarrow 1 = 1$   $\surd$  \\
+
+
 \textbf{Induktionsvoraussetzung}:\\
-$ggT(F_n, F_{n+1}) = F_{n-1} \cdot F_n+F_{n-2}\cdot F_{n+1}$\\
-\\
+$ggT(F_n, F_{n+1}) = F_{n-1} \cdot F_n - F_{n-2}\cdot F_{n+1}$\\
+
 \textbf{Induktionsschritt}:\\
-z.Z.
-$ggT(F_{n+1}, F_{(n+1)+1})=F_{(n+1)-1} \cdot F_{n+1} + F_{(n+1)-2} \cdot F_{(n+1)+1}$\\
-$=ggT(F_{n+1}, F_{n+2})=F_{n} \cdot F_{n+1} + F_{n-1} \cdot F_{n+2}$\\
-$=ggT(F_{n+1}, F_{n+2})=(F_{n} \cdot F_{n} + F_n \cdot F_{n-1}) + (F_{n-1} \cdot F_{n+1} + F_{n-1} \cdot F_{n}$)\\
-$=ggT(F_{n+1}, F_{n+2})=F_{n} (F_{n} + F_{n-1}) + F_{n-1} (F_{n+1} + F_{n}$) (Distributivgesetz nach 4.22)\\
+z.z.: $ggT(F_{n+1}, F_{(n+1)+1})=F_{(n+1)-1} \cdot F_{n+1} - F_{(n+1)-2} \cdot F_{(n+1)+1}$\\
+$ggT(F_{n+1}, F_{(n+1)+1})= ...$
+
+
+%So geht man nicht bei einer Induktion vor. Man nimmt sich die linke Seite und muss sie, unter Einsetzen der IV, in die rechte überführen. Wir haben also nicht in jeder Zeile wieder zwei Ausdrücke die über ein Gleichheitszeichen vergleichen werden.
+%$=ggT(F_{n+1}, F_{n+2})=F_{n} \cdot F_{n+1} + F_{n-1} \cdot F_{n+2}$\\
+%\\$=ggT(F_{n+1}, F_{n+2})=(F_{n} \cdot F_{n} + F_n \cdot F_{n-1}) + (F_{n-1} \cdot F_{n+1} + F_{n-1} \cdot F_{n}$)\\
+%\\$=ggT(F_{n+1}, F_{n+2})=F_{n} (F_{n} + F_{n-1}) + F_{n-1} (F_{n+1} + F_{n}$) (Distributivgesetz nach 4.22)\\
 
 \end{document}
