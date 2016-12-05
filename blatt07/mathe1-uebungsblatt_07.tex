@@ -108,17 +108,18 @@ Nach der Anwendung des erweiterten euklidischen Algorithmus ist der größte gem
 
 \section*{Aufgabe H17 b)}
 \textbf{Behauptung}: \\
-Der ggT von $F_n$ ist immer 1.\\
-$a=F_{n-1} , b= F_{n-2}$\\
+Der ggT$(F_n, F_{n+1})$ ist immer 1.\\
+Für $\forall~n \geq 3$ ist $a=F_{n-1} , b= F_{n-2}$\\
 \\
 Beweis durch vollständige Induktion über n.\\
 \textbf{Induktionsanfang}:\\
-$n=0$
+$n<3$
 \\
 \textbf{Induktionsvoraussetzung}:\\
-$ggT(F_n, F_{n-1}) = F_{n-1} \cdot F_n+F_{n-1}\cdot F_{n+1}$\\
+$ggT(F_n, F_{n+1}) = F_{n-1} \cdot F_n+F_{n-2}\cdot F_{n+1}$\\
 \\
 \textbf{Induktionsschritt}:\\
 z.Z.
-$ggT(F_{n+1}, F_{(n+a)+1})=F_{(n+1)-1} \cdot F_{n+1} + F_{(n+1)-2} \cdot F_{(n+1)+1}$
+$ggT(F_{n+1}, F_{(n+1)+1})=F_{(n+1)-1} \cdot F_{n+1} + F_{(n+1)-2} \cdot F_{(n+1)+1}$\\
+$=ggT(F_{n+1}, F_{n+2})=F_{n} \cdot F_{n+1} + F_{n-1} \cdot F_{n+2}$
 \end{document}
