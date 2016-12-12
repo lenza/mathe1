@@ -28,7 +28,7 @@ $\overline{m_3}=m_2\cdot m_1$   $\overline{m_3 = 3} \cdot 5 = 15$\\
 Suchen $x_1, x_2, x_3 \in \mathbb{Z}$ s.d.\\
 $\overline{m_1}\cdot x_1 + \overline{x_2} \cdot x_2 + \overline{m_3} \cdot x_3 = 1(mod(m_1,m_2,m_3))$\\
 \\
-Suchen $x_1,y_1 aus \mathbb{Z}:$\\
+Suchen $x_1,y_1 ~aus~ \mathbb{Z}:$\\
 
 \begin{center}
 	\begin{tabular}{ | l | l | l | l | l | l | l|}
@@ -40,9 +40,9 @@ Suchen $x_1,y_1 aus \mathbb{Z}:$\\
 	\end{tabular}
 \end{center}
 $\overline{m_1} \cdot x_1 + m_1 \cdot y_1 = 1$\\
-$55 ßcdot 1 + 3\cdot (-18) = 1 \checkmark$
+$55 \cdot 1 + 3\cdot (-18) = 1 \checkmark$
 \\
-Suchen $x_2,y_2 aus \mathbb{Z}:$\\
+Suchen $x_2,y_2 ~aus~ \mathbb{Z}:$\\
 \begin{center}
 	\begin{tabular}{ | l | l | l | l | l | l | l|}
 		\hline
@@ -56,8 +56,9 @@ Suchen $x_2,y_2 aus \mathbb{Z}:$\\
 \end{center}
 $\overline{m_2} \cdot x_2 + m_2 \cdot y_2 = 1$\\
 $33\cdot 2 + 5 \cdot (-13) = 66-65 = 1 \checkmark$\\
-\\
-Suchen $x_3,y_3 aus \mathbb{Z}:$\\
+
+\newpage
+Suchen $x_3,y_3 ~aus~ \mathbb{Z}:$\\
 \begin{center}
 	\begin{tabular}{ | l | l | l | l | l | l | l|}
 		\hline
@@ -85,7 +86,50 @@ t $ mod(3,5,11) = 148 $
 Eindeutig, weil 148 ist immer der Rest ist.
 
 \section*{Aufgabe H19}
-\section*{Aufgabe H20}
-\section*{Aufgabe B4}
+Bestimmung der fehlenden Ziffer X der ISBN-13: $978-3-827X-1692-6$\\
+Prüfziffer $z_{13} = 6 = 10-r$ d.h. $r = 4$\\
+\[r = y (mod~10) = 4\]
 
+Die Nebenbedingungen für Ziffern der ISBN-13 ist $X \in \mathbb{N}$ und $X \leq 9$ \\
+Mit der gegebenen Formel aus der Vorlesung berechnen wir $y$:\\
+\[y = z_1+z_3+z_5+z_7+z_9+z_{11}+ 3 \cdot (z_2+z_4+z_6+z_8+z_{10}+z_{12})\]
+\[y = 9+8+8+7+1+9 + 3 \cdot (7+3+2+X+6+2)\]
+\[y= 42 + 21 +9 +6 + 3X + 18 + 6\]
+\[y = 102 + 3X \Longleftrightarrow  \frac{y-102}{3} = X\]
+$y$ kann nur Werte aus der Reihe $(4,14,24,34,\dots)$ annehmen.\\
+Wir wählen z.B. $y=124 \Rightarrow \frac{124-102}{3} = X = 22= 7,\bar{33}$\\
+124 kann nicht die Lösung sein, da $7,\bar{33}$ keine Zahl aus $\mathbb{N}$ ist.\\
+Wir wählen $y=114 \Rightarrow \frac{114-102}{3} = X = 4$
+
+Zur Überprüfung berechnen wir die Prüfsumme mit $X=4$:\\
+\[y = 9+8+8+7+1+9 + 3 \cdot (7+3+2+4+6+2)\]
+\[y = 42 + 72 = 114\]
+\[r = 114(mod~10) = 4\]
+\[z_{13} = 10-4 = 6\]
+
+\section*{Aufgabe H20}
+Die Kongruenz $ax \equiv b(mod~m)$ mit $a,b$ aus $ \mathbb{Z}$ und $b=0$ und $m$ ist Primzahl und $m \in \mathbb{N}$ ist beliebig.\\
+Da $b=0$ ist, hat $b(mod~m)$ Rest $0$\\
+Mit der Relation (Nach Definition 5.28 der Vorlesung):\\
+\[a \sim_m b \Longleftrightarrow m|(a-b)\]
+muss $a=1$ oder $a=m$ sein oder $a$ ist ein Vielfaches von $m$, da $m$ als Primzahl nur durch sich selber und 1 teilbar ist.\\
+\section*{Aufgabe B4}
+Je zwei Beispiele für $a,b,m$ mit der Kongruenzgleichung $ax \equiv b(mod~m)$
+\subsection*{a}
+Beispiel 1: Die Kongruenzgleichung mit $a=4, b=7, m=2$:\\
+\[4x \equiv 7 (mod~2)\]
+hat keine Lösung, da $4x$ immer gerade ist, aber $7 + k \cdot 2$ für alle $k \in \mathbb{Z}$ eine ungerade Zahl ergibt durch die Addition mit der ungeraden Zahl $7$, wie in Beispiel 5.27 der Vorlesung gezeigt wurde.\\
+\\
+Beispiel 2: Die Kongruenzgleichung mit $a=6, b=11, m=3$:\\
+\[6x \equiv 11 (mod~3)\]
+hat keine Lösung, da $6x$ immer gerade ist, aber $11 + k \cdot 3$ für alle $k \in \mathbb{Z}$ eine ungerade Zahl ergibt durch die Addition mit der ungeraden Zahl $11$, wie in Beispiel 5.27 der Vorlesung gezeigt wurde.\\
+\subsection*{b}
+Beispiel 1: !!!Stimmt noch nicht, ich habe nicht die richtigen Zahlen gefunden!!!\\
+Die Kongruenz mit $a=1, b=1, m=2 ~mit~ 0\leq a < m: [a]_m = \{x \in \mathbb{Z}| x\equiv b(mod~m)\}$\\
+Dann gilt:\\
+\[[0]_2 = \{\cdots, -4,-2,0,2,4,\cdots \}\]
+\[[1]_2 = \{\cdots, -3,-1,1,3,5,\cdots \}\]
+\[[2]_2 = \{\overline{0}, \overline{1}\}\]
+Damit hat die Kongruenz: $1\cdot x=1(mod~2)$ die Lösung $x \in [2]_2.$ Alle Lösungen liegen in derselben Äquivalenzklasse bezüglich $\sim_2$. Damit gibt es eine eindeutige Lösung.\\
+Beispiel 2: fehlt
 \end{document}
