@@ -113,8 +113,10 @@ Da $b=0$ ist, hat $b(mod~m)$ Rest $0$\\
 Mit der Relation (Nach Definition 5.28 der Vorlesung):\\
 \[a \sim_m b \Longleftrightarrow m|(a-b)\]
 muss $a=1$ oder $a=m$ sein oder $a$ ist ein Vielfaches von $m$, da $m$ als Primzahl nur durch sich selber und 1 teilbar ist.\\
+
 \section*{Aufgabe B4}
 Je zwei Beispiele für $a,b,m$ mit der Kongruenzgleichung $ax \equiv b(mod~m)$
+
 \subsection*{a}
 Beispiel 1: Die Kongruenzgleichung mit $a=4, b=7, m=2$:\\
 \[4x \equiv 7 (mod~2)\]
@@ -123,13 +125,22 @@ hat keine Lösung, da $4x$ immer gerade ist, aber $7 + k \cdot 2$ für alle $k \
 Beispiel 2: Die Kongruenzgleichung mit $a=6, b=11, m=3$:\\
 \[6x \equiv 11 (mod~3)\]
 hat keine Lösung, da $6x$ immer gerade ist, aber $11 + k \cdot 3$ für alle $k \in \mathbb{Z}$ eine ungerade Zahl ergibt durch die Addition mit der ungeraden Zahl $11$, wie in Beispiel 5.27 der Vorlesung gezeigt wurde.\\
+
 \subsection*{b}
-Beispiel 1: !!!Stimmt noch nicht, ich habe nicht die richtigen Zahlen gefunden!!!\\
-Die Kongruenz mit $a=1, b=1, m=2 ~mit~ 0\leq a < m: [a]_m = \{x \in \mathbb{Z}| x\equiv b(mod~m)\}$\\
-Dann gilt:\\
-\[[0]_2 = \{\cdots, -4,-2,0,2,4,\cdots \}\]
-\[[1]_2 = \{\cdots, -3,-1,1,3,5,\cdots \}\]
-\[[2]_2 = \{\overline{0}, \overline{1}\}\]
-Damit hat die Kongruenz: $1\cdot x=1(mod~2)$ die Lösung $x \in [2]_2.$ Alle Lösungen liegen in derselben Äquivalenzklasse bezüglich $\sim_2$. Damit gibt es eine eindeutige Lösung.\\
-Beispiel 2: fehlt
+Beispiel 1:\\
+Die Kongruenz mit $a=1, b=1, m=12 ~mit~ 0\leq a < m: [a]_m = \{x \in \mathbb{Z}| x\equiv b(mod~m)\}$\\
+Es gilt:\\
+\[[1]_{12} = \{\cdots, -23, -11,1, 13, 25,\cdots \}\]
+%\[[1]_2 = \{\cdots, -3,-1,1,3,5,\cdots \}\]
+%\[[2]_2 = \{\overline{0}, \overline{1}\}\]
+Die Kongruenz  $1\cdot x=1(mod~12)$ hat die Lösung $x \in [1]_{12}.$ Alle Lösungen liegen in derselben Äquivalenzklasse bezüglich $\sim_1$. Damit gibt es eine eindeutige Lösung (mod 12).\\
+
+
+Beispiel 2: \\
+Die Kongruenz mit $a=1, b=1, m=18 ~mit~ 0\leq a < m: [a]_m \equiv \{x \in \mathbb{Z}| x\equiv b(mod~m)\}$\\
+Es gilt:\\
+\[[1]_{18} = \{\cdots, -35, -17,1,0,19, 37,\cdots \}\]
+%\[[1]_2 = \{\cdots, -3,-1,1,3,5,\cdots \}\]
+%\[[2]_2 = \{\overline{0}, \overline{1}\}\]
+Damit hat die Kongruenz  $1\cdot x=1(mod~18)$ die Lösung $x \in [1]_{18}.$ Alle Lösungen liegen in derselben Äquivalenzklasse bezüglich $\sim_1$. Damit gibt es eine eindeutige Lösung (mod 18).\\
 \end{document}
