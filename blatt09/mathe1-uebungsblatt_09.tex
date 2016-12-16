@@ -19,65 +19,84 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Aufgabe H21}
 \subsection*{a}
-Behauptung: $\forall~n,k \in \mathbb{N} k \leq n $ gilt:$ (
-\begin{smallmatrix}
-n\\k
-\end{smallmatrix} ) = \frac{n!}{k!(n-k)!}$\\
-Beweis durch vollständige Induktion über n.\\ \\
-IA: $n=0\\
-(
-\begin{smallmatrix}
-0\\0
-\end{smallmatrix} ) = \frac{0!}{0!(0-0)!}\\
-1=\frac{1}{1\cdot 1}\\
-1=1 \checkmark$
-\\ \\
-IV: $(
-\begin{smallmatrix}
-	n\\k
-\end{smallmatrix} ) = \frac{n!}{k!(n-k)!}$\\
-\\ \\
-IS: $(
-\begin{smallmatrix}
-n+1\\k
-\end{smallmatrix} ) = 
-\frac{(n+1)!}{k!((n+1)-k)!}\\= (
-\begin{smallmatrix}
-n\\k-1
-\end{smallmatrix} ) + (
-\begin{smallmatrix}
-n\\k 
-\end{smallmatrix} ) \\
-= $(Nach IV)
-\\
-$(
-\begin{smallmatrix}
-\frac{n!}{(n-1)!\cdot (n-(k-1))!} 
-\end{smallmatrix} ) + \frac{n!}{k!(n-k)!}
-\\ \\
-Fallunterscheidung:\\
-1.Fall: $k<n$\\
-$
-\\ \\
-2.Fall: $k=n\\ (
-\frac{n!}{(n-1)!\cdot (n-(k-1))!} 
-\begin{smallmatrix}
-+ \frac{n!}{k!(n-k)!}
-\end{smallmatrix} ) + 
-\frac{n!}{k!(n-k)!}\\ 
-= (\begin{smallmatrix}
-n\\n-1
-\end{smallmatrix} ) + 
-\frac{n!}{k!0!}\\ = (
-\begin{smallmatrix}
-n\\n-1
-\end{smallmatrix} ) + 
-\frac{n!}{k!}\\ 
-= ( \begin{smallmatrix}
-n\\n-1
-\end{smallmatrix} ) + 1$\\
+Behauptung: $\forall~n,k \in \mathbb{N}, k \leq n $ gilt: 
+$\binom{n}{k} = \frac{n!}{k!(n-k)!}$
+
+
+Beweis durch vollständige Induktion über n.\\
+
+\textbf{Induktionsanfang}: \\
+$ n = 0$ \\
+$\binom{0}{0} = \frac{0!}{0!(0-0)!}$   (k=0, da $k \leq n$) \\
+$\Leftrightarrow 1 = \frac{1}{1\cdot1}$ \\
+$\Leftrightarrow 1 = 1$   \checkmark \\
+
+\textbf{Induktionsvoraussetzung}: \\
+$\binom{n}{k} = \frac{n!}{k!(n-k)!}$ \\
+
+\textbf{Induktionsschritt}: \\
+z.z.: $\binom{n+1}{k} = \frac{(n+1)!}{k!((n+1)-k)!}$ \\
+
+$\binom{n+1}{k} = \binom{n}{k-1} + \binom{n}{k}$ \\
+$= \frac{n!}{(k-1)!(n-(k-1))!} + \frac{n!}{k!(n-k)!}$ ~~(nach \textbf{Induktionsvoraussetzung}) \\
+
+1. Fall: $ k < n$ \\
+
+$\frac{n!}{(k-1)!(n-(k-1))!} + \frac{n!}{k!(n-k)!}$ \\
+$= \frac{n!}{(k-1)!(n-k+1)!} + \frac{n!}{k!(n-k)!}$ \\
+$= \frac{k \cdot n!}{k \cdot (k-1)! (n-k+1))!} + \frac{n!\cdot (n-k+1)}{k!(n-k)! \cdot (n-k+1)}$ \\
+$= \frac{k \cdot n!}{k! (n-k+1))!} + \frac{n!\cdot (n-k+1)}{k!(n-k+1)!}$ \\
+$= \frac{n! \cdot k + n!\cdot (n-k+1)}{k! (n-k+1))!}$ \\
+$= \frac{n! \cdot (k+n-k+1)}{k! (n-k+1))!}$ \\
+$= \frac{n! \cdot (n+1)}{k! (n-k+1))!}$ \\
+$= \frac{(n+1)!}{k! ((n+1)-k)!}$ \\
+
+2. Fall: Spezialfall k = n
+
+$\frac{n!}{(n-1)!(n-(n-1))!} + \frac{n!}{n!(n-n)!}$ \\
+$= \frac{n!}{(n-1)! \cdot 1!} + \frac{n!}{n!\cdot1}$ \\
+$= \frac{n!}{(n-1)!} + 1$ \\
+$= \frac{n!}{(n-1)!} + \frac{(n-1)!}{(n-1)!}$ \\
+$= \frac{n! + (n-1)!}{(n-1)!}$ \\
+$= \frac{(n! + (n-1)!)\cdot n}{(n-1)!\cdot n}$ \\
+$= \frac{n! \cdot n + (n-1)!\cdot n}{(n)!}$ \\
+$= \frac{n! \cdot n + n!\cdot n}{(n)!}$ \\
+$= \frac{n! \cdot (n+1)\cdot n}{(n)!}$ \\
+$= \frac{(n+1)!}{(n)!}$ \\
+$= \frac{(n+1)!}{(n)! \cdot ((n+1)-n)!}$ \\
+
+In der letzten Zeile der Gleichung fügen wir als neutrales Element $((n+1)-n)!$ hinzu. Dieser Ausdruck ergibt 1, wir multiplizieren als mit 1. Damit ist in der letzten Zeile die Induktion für n = k abgeschlossen.   $_{\Box}$
+
 
 \subsection*{b}
+Sind a, b reelle Zahlen, so gilt für alle $n \in \mathbb{N}$:
+
+$(a + b)^n = \sum \limits_{k=0}^{n}\binom{n}{k}a^kb^{n-k}$
+
+Beweis mittels vollständiger Induktion über n: \\
+
+\textbf{Induktionsanfang}: \\
+$ n = 0$ \\
+$(a + b)^0 = \sum \limits_{k=0}^{0}\binom{0}{k}a^kb^{0-k}$ \\
+$\Leftrightarrow 1 = \sum \limits_{0=0}^{0}\binom{0}{0}a^0b^{0-0}$ \\
+$\Leftrightarrow 1 = 1 \cdot 1 \cdot 1$ \\
+$\Leftrightarrow 1 = 1$   \checkmark \\
+
+\textbf{Induktionsvoraussetzung}: \\
+$(a + b)^n = \sum \limits_{k=0}^{n}\binom{n}{k}a^kb^{n-k}$ \\
+
+\newpage
+\textbf{Induktionsschritt}: \\
+z.z.: $(a + b)^{n+1} = \sum \limits_{k=0}^{n+1}\binom{n+1}{k}a^kb^{(n+1)-k}$ \\
+
+$(a + b)^{n+1} = (a + b)^n \cdot (a+b)$ \\
+$= \sum \limits_{k=0}^{n}\binom{n}{k}a^kb^{n-k} \cdot (a+b)$  (nach \textbf{Induktionsvoraussetzung}) \\
+$= \sum \limits_{k=0}^{n}\binom{n}{k}a^kb^{n-k} \cdot (a+b)$ \\
+$= \sum \limits_{k=0}^{n}\binom{n}{k}a^{k+1}b^{n-k+1}$ \\
+$= \sum \limits_{k=0}^{n+1}\binom{n+1}{k}a^{k+1}b^{(n+1)-k+1} - a^n - b^n$ \\
+$= \sum \limits_{k=1}^{n+1}\binom{n+1}{k-1}a^{k}b^{(n+1)-k} - a^n - b^n$ \\
+$= \sum \limits_{k=0}^{n+1}\binom{n+1}{k}a^{k}b^{(n+1)-k}$    $~~~~_{\Box}$\\
+
 
 \section*{B5}
 \textbf{Behauptung}: Unter neun beliebigen natürlichen Zahlen gibt es stets zwei Zahlen $a,b$, sodass gilt: $8|(a-b)$.\\
