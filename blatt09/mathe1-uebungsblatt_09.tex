@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{german}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{graphics}
+\usepackage{moreverb}
+\usepackage[utf8]{inputenc}
+\include{defs}
+
+\begin{document}
+
+\Abgabeblatt{9}{19. Dezember 2016}{Niklas Gather \#10}
+                {Lena Zamzow}{Tobias Pfannschmidt}{}{}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Aufgabe H21}
+\subsection*{a}
+Behauptung: $\forall~n,k \in \mathbb{N} k \leq n $ gilt:$ (
+\begin{smallmatrix}
+n\\k
+\end{smallmatrix} ) = \frac{n!}{k!(n-k)!}$\\
+Beweis durch vollständige Induktion über n.\\ \\
+IA: $n=0\\
+(
+\begin{smallmatrix}
+0\\0
+\end{smallmatrix} ) = \frac{0!}{0!(0-0)!}\\
+1=\frac{1}{1\cdot 1}\\
+1=1 \checkmark$
+\\ \\
+IV: $(
+\begin{smallmatrix}
+	n\\k
+\end{smallmatrix} ) = \frac{n!}{k!(n-k)!}$\\
+\\ \\
+IS: $(
+\begin{smallmatrix}
+n+1\\k
+\end{smallmatrix} ) = 
+\frac{(n+1)!}{k!((n+1)-k)!}\\= (
+\begin{smallmatrix}
+n\\k-1
+\end{smallmatrix} ) + (
+\begin{smallmatrix}
+n\\k 
+\end{smallmatrix} ) \\
+= $(Nach IV)
+\\
+$(
+\begin{smallmatrix}
+	n\\k-1
+\end{smallmatrix} ) + \frac{n!}{k!(n-k)!}$\\
+\\ \\
+Fallunterscheidung:\\
+1.Fall: $k<n$\\
+=(Nach IV)$ \\
+\frac{n!}{(n-1)!\cdot (n-(k-1))!} + \frac{n!}{k!(n-k)!}
+$
+\\ \\
+2.Fall: $k=n\\ (
+\begin{smallmatrix}
+	n\\n-1
+\end{smallmatrix} ) + 
+\frac{n!}{k!(n-k)!}\\ 
+= (\begin{smallmatrix}
+n\\n-1
+\end{smallmatrix} ) + 
+\frac{n!}{k!0!}\\ = (
+\begin{smallmatrix}
+n\\n-1
+\end{smallmatrix} ) + 
+\frac{n!}{k!}\\ 
+= ( \begin{smallmatrix}
+n\\n-1
+\end{smallmatrix} ) + 1$\\
+
+\subsection*{b}
+
+\section*{B5}
+Unter neun beliebigen natürlichen Zahlen gibt es stets zwei Zahlen $a,b$, so dass gilt: $8|(a-b)$.\\
+Als Kongruenzgleichung:
+$a \equiv b (mod 8)$\\
+s.d. $a (mod 8) = b (mod 8)$\\ \\
+Unsere Zahlen $a,b$ müssen beim gleichen ggT den gleichen Rest lassen. Bei neun beliebigen natürlichen Zahlen muss es immer zwei geben, die die gleiche Restklasse haben.
+
+\end{document}
